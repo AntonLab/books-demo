@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router'
 
 import Template from '@components/Template'
-import { Home } from '@pages/home'
+import { Home } from '@/pages/Home'
 
 export const publicRoutes = createBrowserRouter([
   {

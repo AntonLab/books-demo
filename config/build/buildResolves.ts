@@ -6,6 +6,7 @@ export default (paths: BuildPaths): Configuration['resolve'] => {
   return {
     alias: {
       '@': paths.src,
+      '@assets': paths.assets,
       '@components': paths.components,
       '@pages': paths.pages,
     },

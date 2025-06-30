@@ -3,21 +3,20 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Node",
     "noImplicitAny": true,
     "paths": {
       "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"]
     },
     "skipLibCheck": true,
-    "sourceMap": true,
     "strict": true,
-    "target": "ES5",
-    "removeComments": true
+    "removeComments": true,
+    "target": "ES5"
   },
   "ts-node": {
     "compilerOptions": {

@@ -1,6 +1,5 @@
-import path from 'path'
+import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { dirname } from 'path'
 
 import buildWebpackConfig from './config/build/buildWebpackConfig.ts'
 import type { EnvVariables } from './config/build/types.ts'
@@ -11,9 +10,11 @@ const __dirname = dirname(__filename)
 export default (env: EnvVariables) => {
   const config = {
     analyzer: env.analyzer ?? false,
+    platform: env.platform ?? 'desktop',
     port: env.port ?? 3000,
     mode: env.mode ?? 'development',
     paths: {
+      assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       html: path.resolve(__dirname, 'public', 'index.html'),

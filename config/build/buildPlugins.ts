@@ -1,14 +1,33 @@
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export default (htmlPath = '', isAnalyzer = false, isDev = false): webpack.Configuration['plugins'] => {
+import type { BuildOptions } from './types'
+
+const __filename = fileURLToPath(import.meta.url)
+
+export default (env: BuildOptions): webpack.Configuration['plugins'] => {
+  const htmlPath = env.paths.html
+  const publicPath = env.paths.public
+  const isAnalyzer = Boolean(env.analyzer)
+  const isDev = env.mode === 'development'
+  const platform = env.platform
+
   const plugins: webpack.Configuration['plugins'] = [
-    new HtmlWebpackPlugin({ template: htmlPath })
+    new webpack.DefinePlugin({
+      __PLATFORM__: JSON.stringify(platform)
+    }),
+    new HtmlWebpackPlugin({ template: htmlPath, favicon: path.resolve(publicPath, 'favicon.ico') }),
   ]
 
   if (isDev) {
+    plugins.push(new ForkTsCheckerWebpackPlugin())
+    plugins.push(new ReactRefreshWebpackPlugin())
     plugins.push(new webpack.ProgressPlugin())
   } else {
     plugins.push(new MiniCssExtractPlugin({

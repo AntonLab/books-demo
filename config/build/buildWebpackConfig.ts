@@ -1,4 +1,5 @@
 import type { Configuration } from 'webpack'
+import 'webpack-dev-server'
 
 import buildDevServer from './buildDevServer.ts'
 import buildLoaders from './buildLoaders.ts'
@@ -18,15 +19,15 @@ export default (env: BuildOptions): Configuration => {
       filename: '[name].[contenthash:8].js',
       clean: true
     },
-    plugins: buildPlugins(paths.html, env.analyzer, isDev),
+    plugins: buildPlugins(env),
     resolve: buildResolves(paths),
     module: {
       rules: buildLoaders(isDev)
-    }
+    },
+    devtool: isDev ? 'eval-cheap-source-map' : 'source-map'
   }
 
   if (isDev) {
-    config.devtool = 'inline-source-map'
     config.devServer = buildDevServer(env)
   }
 
