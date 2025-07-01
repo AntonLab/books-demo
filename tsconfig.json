@@ -11,11 +11,14 @@
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@functions/*": ["src/functions/*"],
       "@pages/*": ["src/pages/*"]
     },
+    "removeComments": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "removeComments": true,
     "target": "ES5"
   },
   "ts-node": {

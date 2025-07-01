@@ -1,4 +1,4 @@
-import type { Configuration } from 'webpack'
+import { type Configuration } from 'webpack'
 import 'webpack-dev-server'
 
 import buildDevServer from './buildDevServer.ts'
@@ -6,9 +6,9 @@ import buildLoaders from './buildLoaders.ts'
 import buildPlugins from './buildPlugins.ts'
 import buildResolves from './buildResolves.ts'
 
-import type { BuildOptions } from './types.ts'
+import { type BuildOptions } from './types.ts'
 
-export default (env: BuildOptions): Configuration => {
+const buildWebpackConfig= (env: BuildOptions): Configuration => {
   const { mode, paths } = env
   const isDev = mode === 'development'
   const config: Configuration = {
@@ -33,3 +33,5 @@ export default (env: BuildOptions): Configuration => {
 
   return config
 }
+
+export default buildWebpackConfig

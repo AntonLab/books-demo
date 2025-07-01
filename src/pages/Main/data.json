@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "link": "https://example.com/author1",
+    "image": "https://example.com/image1.jpg",
+    "title": "Book Title 1",
+    "author": {
+      "fullName": "Author 1",
+      "link": "https://example.com/author1"
+    }
+  },
+  {
+    "id": 2,
+    "link": "https://example.com/author1",
+    "image": "https://example.com/image1.jpg",
+    "title": "Book Title 1",
+    "author": {
+      "fullName": "Author 1",
+      "link": "https://example.com/author1"
+    }
+  },
+  {
+    "id": 3,
+    "link": "https://example.com/author1",
+    "image": "https://example.com/image1.jpg",
+    "title": "Book Title 1",
+    "author": {
+      "fullName": "Author 1",
+      "link": "https://example.com/author1"
+    }
+  },
+  {
+    "id": 4,
+    "link": "https://example.com/author1",
+    "image": "https://example.com/image1.jpg",
+    "title": "Book Title 1",
+    "author": {
+      "fullName": "Author 1",
+      "link": "https://example.com/author1"
+    }
+  }
+]

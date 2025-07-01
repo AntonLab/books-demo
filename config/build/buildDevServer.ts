@@ -1,6 +1,6 @@
-import type { EnvVariables } from './types.ts'
+import { type EnvVariables } from './types.ts'
 
-export default (env: EnvVariables) => {
+const buildDevServer = (env: EnvVariables) => {
   return {
     historyApiFallback: true,
     hot: true,
@@ -8,3 +8,5 @@ export default (env: EnvVariables) => {
     open: true
   }
 }
+
+export default buildDevServer

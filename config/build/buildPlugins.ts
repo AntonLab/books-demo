@@ -3,15 +3,12 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import path from 'path'
-import { fileURLToPath } from 'url'
 import webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-import type { BuildOptions } from './types'
+import { type BuildOptions } from './types.ts'
 
-const __filename = fileURLToPath(import.meta.url)
-
-export default (env: BuildOptions): webpack.Configuration['plugins'] => {
+const buildPlugins = (env: BuildOptions): webpack.Configuration['plugins'] => {
   const htmlPath = env.paths.html
   const publicPath = env.paths.public
   const isAnalyzer = Boolean(env.analyzer)
@@ -42,3 +39,5 @@ export default (env: BuildOptions): webpack.Configuration['plugins'] => {
 
   return plugins
 }
+
+export default buildPlugins

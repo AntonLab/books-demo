@@ -1,26 +1,33 @@
 import { createBrowserRouter } from 'react-router'
 
+import { App } from '@components/App'
 import Template from '@components/Template'
-import { Home } from '@/pages/Home'
+import { ROUTES } from '@constants/common'
+import { Main } from '@pages/Main'
+import { MyLibrary } from '@pages/MyLibrary'
 
 export const publicRoutes = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
+    path: ROUTES.home,
+    element: <App />,
     children: [
       {
-        path: 'main',
-        element: <Template title="Main" />
+        path: '',
+        element: <Main />
       },
       {
-        path: 'about',
-        element: <Template title="About" />
+        path: ROUTES.myLibrary,
+        element: <MyLibrary />
+      },
+      {
+        path: ROUTES.search,
+        element: <Template title="Search" />
       }
     ]
   }
 ])
 
-export const privateRoutes = createBrowserRouter([
+/* export const privateRoutes = createBrowserRouter([
   {
     path: 'admin',
     element: <Template title="Admin" />
@@ -29,4 +36,4 @@ export const privateRoutes = createBrowserRouter([
     path: 'reports',
     element: <Template title="Reports" />
   }
-])
+]) */

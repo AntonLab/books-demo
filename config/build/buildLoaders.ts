@@ -1,6 +1,6 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshTypeScript from 'react-refresh-typescript'
-import type { ModuleOptions } from 'webpack'
+import { type ModuleOptions } from 'webpack'
 
 const createStylesLoader = (isDev = false) => {
   const cssLoader = {
@@ -21,7 +21,7 @@ const createStylesLoader = (isDev = false) => {
   return stylesLoader
 }
 
-export default (isDev = false): ModuleOptions['rules'] => {
+const buildLoaders = (isDev = false): ModuleOptions['rules'] => {
   const assetsLoader = {
     exclude: /node_modules/,
     test: /\.(png|jpe?g|gif|woff2?|eot|ttf)$/i,
@@ -52,3 +52,5 @@ export default (isDev = false): ModuleOptions['rules'] => {
 
   return [assetsLoader, stylesLoader, svgrLoader, tsLoader]
 }
+
+export default buildLoaders

@@ -1,5 +1,4 @@
-import type { FC, ReactNode } from 'react'
-import { Suspense } from 'react'
+import { type FC, type ReactNode, Suspense } from 'react'
 import { Spin } from 'antd'
 
 import classes from './SuspenseWrapper.module.scss'
