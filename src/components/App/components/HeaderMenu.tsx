@@ -1,10 +1,11 @@
-import { Menu } from 'antd'
+import { Flex, Menu } from 'antd'
 import { type FC } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@constants/common'
+import RightMenu from './RightMenu'
 
-const items = [
+const navLeft = [
   {
     key: 'home',
     label: <Link to={ROUTES.home}>Home</Link>
@@ -12,21 +13,19 @@ const items = [
   {
     key: 'my-library',
     label: <Link to={ROUTES.myLibrary}>My Library</Link>
-  },
-  {
-    key: 'search',
-    label: <Link to={ROUTES.search}>Search</Link>
   }
 ]
 
-const HeaderMenu: FC = () => {
-  return (
+const HeaderMenu: FC = () => (
+  <Flex justify="space-between">
     <Menu
-      items={items}
+      items={navLeft}
       mode="horizontal"
       theme="dark"
     />
-  )
-}
+
+    <RightMenu />
+  </Flex>
+)
 
 export default HeaderMenu

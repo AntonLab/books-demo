@@ -10,6 +10,7 @@ const todayYear = new Date().getFullYear()
 // TODO: Add prettier, eslint, husky
 // TODO: Add error boundary
 // TODO: Add antd theme provider
+// TODO: Check bundle size warnings
 
 const App: FC = () => (
   <Layout>

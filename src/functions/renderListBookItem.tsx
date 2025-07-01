@@ -5,7 +5,7 @@ import { Card, Flex, List, Typography } from 'antd'
 const renderListBookItem = (item: any): JSX.Element => (
   <List.Item>
     <Card hoverable>
-      <Flex vertical align="center" justify="center">
+      <Flex vertical align="center">
         <Link to={item.link}>
           <Typography.Text>{item.title}</Typography.Text>
         </Link>
