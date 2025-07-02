@@ -19,6 +19,14 @@ const Main: FC = () => {
       >
         <List bordered={false} dataSource={data} rowKey="id" renderItem={renderListBookItem} />
       </ContentRow>
+
+      <ContentRow
+        title="Popular Books"
+        subTitle="The most popular books today. The list is updated every hour"
+        extra={<Link to={ROUTES.search}>Search</Link>}
+      >
+        <List bordered={false} dataSource={data} rowKey="id" renderItem={renderListBookItem} />
+      </ContentRow>
     </Layout>
   )
 }

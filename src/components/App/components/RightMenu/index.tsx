@@ -20,7 +20,7 @@ const RightMenu: FC = () => {
     }
   ], [setOpen])
   
-  const handleOnCancel = useCallback(() => {
+  const onCancel = useCallback(() => {
     setOpen(false)
   }, [setOpen])
 
@@ -32,7 +32,7 @@ const RightMenu: FC = () => {
         theme="dark"
       />
 
-      <MenuModal open={open} handleOnCancel={handleOnCancel} />
+      <MenuModal open={open} onCancel={onCancel} />
     </>
   )
 }
