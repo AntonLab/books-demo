@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router'
+
 import { publicRoutes } from './routes'
 
 const root = document.getElementById('root')
@@ -10,6 +11,4 @@ if (!root) {
 
 const container = createRoot(root)
 
-container.render(
-  <RouterProvider router={publicRoutes} />
-)
+container.render(<RouterProvider router={publicRoutes} />)

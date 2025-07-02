@@ -1,4 +1,4 @@
-import { memo, type FC } from 'react'
+import { type FC, memo } from 'react'
 
 import classes from './RulesList.module.scss'
 
@@ -12,7 +12,9 @@ const PASSWORD_RULES = [
 
 const RulesList: FC = () => (
   <ul className={classes.validationMessages}>
-    {PASSWORD_RULES.map((text = '', index = 0) => <li key={`rule-${index}`}>{text}</li> )}
+    {PASSWORD_RULES.map((text = '', index = 0) => (
+      <li key={`rule-${index}`}>{text}</li>
+    ))}
   </ul>
 )
 

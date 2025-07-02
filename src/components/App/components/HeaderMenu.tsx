@@ -3,6 +3,7 @@ import { type FC } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@constants/common'
+
 import RightMenu from './RightMenu'
 
 const navLeft = [
@@ -18,11 +19,7 @@ const navLeft = [
 
 const HeaderMenu: FC = () => (
   <Flex justify="space-between">
-    <Menu
-      items={navLeft}
-      mode="horizontal"
-      theme="dark"
-    />
+    <Menu items={navLeft} mode="horizontal" theme="dark" />
 
     <RightMenu />
   </Flex>

@@ -15,7 +15,11 @@ const createStylesLoader = (isDev = false) => {
   const stylesLoader = {
     exclude: /node_modules/,
     test: /\.s[ac]ss$/i,
-    use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, cssLoader, 'sass-loader']
+    use: [
+      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+      cssLoader,
+      'sass-loader'
+    ]
   }
 
   return stylesLoader
@@ -36,18 +40,20 @@ const buildLoaders = (isDev = false): ModuleOptions['rules'] => {
   const tsLoader = {
     exclude: /node_modules/,
     test: /\.tsx?$/,
-    use: [{
-      loader: 'ts-loader',
-      options: {
-        transpileOnly: true,
-        compilerOptions: {
-          sourceMap: isDev
-        },
-        getCustomTransformers: () => ({
-          before: [isDev && ReactRefreshTypeScript()].filter(Boolean)
-        })
+    use: [
+      {
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true,
+          compilerOptions: {
+            sourceMap: isDev
+          },
+          getCustomTransformers: () => ({
+            before: [isDev && ReactRefreshTypeScript()].filter(Boolean)
+          })
+        }
       }
-    }]
+    ]
   }
 
   return [assetsLoader, stylesLoader, svgrLoader, tsLoader]

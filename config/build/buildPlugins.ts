@@ -19,7 +19,10 @@ const buildPlugins = (env: BuildOptions): webpack.Configuration['plugins'] => {
     new webpack.DefinePlugin({
       __PLATFORM__: JSON.stringify(platform)
     }),
-    new HtmlWebpackPlugin({ template: htmlPath, favicon: path.resolve(publicPath, 'favicon.ico') }),
+    new HtmlWebpackPlugin({
+      template: htmlPath,
+      favicon: path.resolve(publicPath, 'favicon.ico')
+    })
   ]
 
   if (isDev) {
@@ -27,10 +30,12 @@ const buildPlugins = (env: BuildOptions): webpack.Configuration['plugins'] => {
     plugins.push(new ReactRefreshWebpackPlugin())
     plugins.push(new webpack.ProgressPlugin())
   } else {
-    plugins.push(new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
-    }))
+    plugins.push(
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash:8].css',
+        chunkFilename: 'css/[name].[contenthash:8].css'
+      })
+    )
   }
 
   if (isAnalyzer) {

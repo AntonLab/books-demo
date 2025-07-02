@@ -10,7 +10,7 @@ const buildResolves = (paths: BuildPaths): Configuration['resolve'] => {
       '@components': paths.components,
       '@constants': paths.constants,
       '@functions': paths.functions,
-      '@pages': paths.pages,
+      '@pages': paths.pages
     },
     extensions: ['.ts', '.tsx', '.js']
   }

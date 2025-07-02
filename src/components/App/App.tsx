@@ -1,9 +1,9 @@
+import { Layout } from 'antd'
 import { type FC } from 'react'
 import { Outlet } from 'react-router'
-import { Layout } from 'antd'
 
-import HeaderMenu from './components/HeaderMenu'
 import classes from './App.module.scss'
+import HeaderMenu from './components/HeaderMenu'
 
 const todayYear = new Date().getFullYear()
 
@@ -17,7 +17,7 @@ const App: FC = () => (
     <Layout.Header>
       <HeaderMenu />
     </Layout.Header>
-    
+
     <Layout.Content>
       <Outlet />
     </Layout.Content>

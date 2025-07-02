@@ -10,9 +10,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
+      "@functions/*": ["src/functions/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
-      "@functions/*": ["src/functions/*"],
       "@pages/*": ["src/pages/*"]
     },
     "removeComments": true,

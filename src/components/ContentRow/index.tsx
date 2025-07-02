@@ -1,5 +1,5 @@
-import { type FC } from 'react'
 import { Card, type CardProps } from 'antd'
+import { type FC } from 'react'
 
 import ContentRowTitle from './components/ContentRowTitle'
 
@@ -11,7 +11,9 @@ interface ContentRowProps extends CardProps {
 const ContentRow: FC<ContentRowProps> = ({ children, ...cardProps }) => (
   <Card
     {...cardProps}
-    title={<ContentRowTitle title={cardProps.title} subTitle={cardProps.subTitle} />}
+    title={
+      <ContentRowTitle title={cardProps.title} subTitle={cardProps.subTitle} />
+    }
   >
     {children}
   </Card>

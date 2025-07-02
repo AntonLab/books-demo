@@ -1,20 +1,18 @@
 import { Form, type ModalProps } from 'antd'
 import { type FC } from 'react'
 
-import LoginFields from './LoginFields'
 import ModalWithForm from '@components/ModalWithForm'
 
-const MenuModal: FC<ModalProps> = ({
-  open,
-  onCancel
-}) => {
+import LoginFields from './LoginFields'
+
+const MenuModal: FC<ModalProps> = ({ open, onCancel }) => {
   const [form] = Form.useForm()
 
   const onFinish = (values: any) => {
     console.log('Form submitted:', values)
   }
 
-  return(
+  return (
     <ModalWithForm
       formProps={{
         form,

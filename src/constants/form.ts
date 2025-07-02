@@ -12,4 +12,8 @@ export const VALIDATE_MESSAGES = {
   }
 }
 
-export const SHORT_STRING_REQUIRED_RULES: Rule = { max: 50, required: true, type: 'string' }
+export const SHORT_STRING_REQUIRED_RULES: Rule = {
+  max: 50,
+  required: true,
+  type: 'string'
+}

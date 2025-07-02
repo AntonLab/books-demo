@@ -1,4 +1,10 @@
-import { type ButtonProps, Form, type FormProps, Modal, type ModalProps } from 'antd'
+import {
+  type ButtonProps,
+  Form,
+  type FormProps,
+  Modal,
+  type ModalProps
+} from 'antd'
 import { type FC, type ReactNode } from 'react'
 
 import { VALIDATE_MESSAGES } from '@constants/form'
@@ -32,7 +38,8 @@ const ModalWithForm: FC<ModalWithFormProps> = ({
     width={400}
     okButtonProps={okButtonProps}
     {...modalProps}
-    modalRender={(dom) => modalRender(dom, formProps)}>
+    modalRender={(dom) => modalRender(dom, formProps)}
+  >
     {children}
   </Modal>
 )

@@ -1,5 +1,5 @@
-import { type FC } from 'react'
 import { Flex, Typography } from 'antd'
+import { type FC } from 'react'
 
 interface ContentRowTitleProps {
   title?: string

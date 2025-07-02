@@ -1,6 +1,6 @@
+import { Card, Flex, List, Typography } from 'antd'
 import { type JSX } from 'react'
 import { Link } from 'react-router'
-import { Card, Flex, List, Typography } from 'antd'
 
 const renderListBookItem = (item: any): JSX.Element => (
   <List.Item>
@@ -11,7 +11,9 @@ const renderListBookItem = (item: any): JSX.Element => (
         </Link>
 
         <Link to={item.author.link}>
-          <Typography.Text type="secondary">{item.author.fullName}</Typography.Text>
+          <Typography.Text type="secondary">
+            {item.author.fullName}
+          </Typography.Text>
         </Link>
       </Flex>
     </Card>

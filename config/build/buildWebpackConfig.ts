@@ -5,10 +5,9 @@ import buildDevServer from './buildDevServer.ts'
 import buildLoaders from './buildLoaders.ts'
 import buildPlugins from './buildPlugins.ts'
 import buildResolves from './buildResolves.ts'
-
 import { type BuildOptions } from './types.ts'
 
-const buildWebpackConfig= (env: BuildOptions): Configuration => {
+const buildWebpackConfig = (env: BuildOptions): Configuration => {
   const { mode, paths } = env
   const isDev = mode === 'development'
   const config: Configuration = {

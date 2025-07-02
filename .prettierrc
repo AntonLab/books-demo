@@ -2,5 +2,16 @@
   "quoteProps": "preserve",
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^@assets/(.*)$",
+    "^@functions/(.*)$",
+    "^@components/(.*)$",
+    "^@constants/(.*)$",
+    "^@pages/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }
