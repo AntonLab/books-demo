@@ -1,17 +1,15 @@
 import { type FC } from 'react'
 
-import SuspenseWrapper from '@components/SuspenseWrapper'
+import PageWrapper from '@components/PageWrapper'
 
 interface TemplateProps {
   title: string
 }
 
 const Template: FC<TemplateProps> = ({ title = '' }) => (
-  <SuspenseWrapper>
-    <div>
-      <h1>{title}</h1>
-    </div>
-  </SuspenseWrapper>
+  <PageWrapper>
+    <h1>{title}</h1>
+  </PageWrapper>
 )
 
 export default Template

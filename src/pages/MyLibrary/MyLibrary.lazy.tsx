@@ -1,13 +1,13 @@
 import { type FC, lazy } from 'react'
 
-import SuspenseWrapper from '@components/SuspenseWrapper'
+import PageWrapper from '@components/PageWrapper'
 
 const MyLibraryLazy = lazy(() => import('./MyLibrary'))
 
-const WrappedMyLibraryLazy: FC = () => (
-  <SuspenseWrapper>
+const MyLibraryLazyWrapper: FC = () => (
+  <PageWrapper>
     <MyLibraryLazy />
-  </SuspenseWrapper>
+  </PageWrapper>
 )
 
-export default WrappedMyLibraryLazy
+export default MyLibraryLazyWrapper
