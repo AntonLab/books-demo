@@ -8,11 +8,13 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const createWebpackConfig = (env: EnvVariables) => {
+  const version = process.env.npm_package_version ?? '1.0'
   const config = {
     analyzer: env.analyzer ?? false,
     platform: env.platform ?? 'desktop',
     port: env.port ?? 3000,
     mode: env.mode ?? 'development',
+    version,
     paths: {
       assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),

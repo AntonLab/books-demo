@@ -13,11 +13,11 @@ const buildPlugins = (env: BuildOptions): webpack.Configuration['plugins'] => {
   const publicPath = env.paths.public
   const isAnalyzer = Boolean(env.analyzer)
   const isDev = env.mode === 'development'
-  const platform = env.platform
+  const version = env.version
 
   const plugins: webpack.Configuration['plugins'] = [
     new webpack.DefinePlugin({
-      __PLATFORM__: JSON.stringify(platform)
+      __VERSION__: JSON.stringify(version)
     }),
     new HtmlWebpackPlugin({
       template: htmlPath,

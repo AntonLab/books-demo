@@ -7,6 +7,7 @@ export interface BuildPaths {
 
 export interface BuildOptions extends EnvVariables {
   paths: BuildPaths
+  version?: string
 }
 
 export interface EnvVariables {

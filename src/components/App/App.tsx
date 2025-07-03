@@ -5,12 +5,12 @@ import { Outlet } from 'react-router'
 import classes from './App.module.scss'
 import HeaderMenu from './components/HeaderMenu'
 
-const todayYear = new Date().getFullYear()
-
 // TODO: Add prettier, eslint, husky
 // TODO: Add error boundary
 // TODO: Add antd theme provider
 // TODO: Check bundle size warnings
+
+const footerText = `Demo project ${new Date().getFullYear()}. Version ${__VERSION__}`
 
 const App: FC = () => (
   <Layout>
@@ -23,7 +23,7 @@ const App: FC = () => (
     </Layout.Content>
 
     <Layout.Footer className={classes.footer}>
-      Demo project {todayYear}
+      {footerText}
     </Layout.Footer>
   </Layout>
 )
