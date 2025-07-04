@@ -9,6 +9,7 @@
     "^@functions/(.*)$",
     "^@components/(.*)$",
     "^@constants/(.*)$",
+    "^@customTypes/(.*)$",
     "^@pages/(.*)$",
     "^[./]"
   ],

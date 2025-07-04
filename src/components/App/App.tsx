@@ -22,9 +22,7 @@ const App: FC = () => (
       <Outlet />
     </Layout.Content>
 
-    <Layout.Footer className={classes.footer}>
-      {footerText}
-    </Layout.Footer>
+    <Layout.Footer className={classes.footer}>{footerText}</Layout.Footer>
   </Layout>
 )
 

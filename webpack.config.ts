@@ -19,6 +19,7 @@ const createWebpackConfig = (env: EnvVariables) => {
       assets: path.resolve(__dirname, 'src', 'assets'),
       components: path.resolve(__dirname, 'src', 'components'),
       constants: path.resolve(__dirname, 'src', 'constants'),
+      customTypes: path.resolve(__dirname, 'src', 'customTypes'),
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       functions: path.resolve(__dirname, 'src', 'functions'),
       html: path.resolve(__dirname, 'public', 'index.html'),

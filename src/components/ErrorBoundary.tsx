@@ -1,15 +1,13 @@
-import { Component, type ReactNode } from 'react'
+import { Component } from 'react'
 
-interface ErrorBoundaryProps {
-  children: ReactNode
-}
+import { type ComponentProps } from '@customTypes/component'
 
 interface ErrorBoundaryState {
   hasError: boolean
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+class ErrorBoundary extends Component<ComponentProps, ErrorBoundaryState> {
+  constructor(props: ComponentProps) {
     super(props)
     this.state = { hasError: false }
   }
