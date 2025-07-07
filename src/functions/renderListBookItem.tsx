@@ -2,7 +2,16 @@ import { Card, Flex, List, Typography } from 'antd'
 import { type JSX } from 'react'
 import { Link } from 'react-router'
 
-const renderListBookItem = (item: any): JSX.Element => (
+interface BookItemProps {
+  link: string
+  title: string
+  author: {
+    fullName: string
+    link: string
+  }
+}
+
+const renderListBookItem = (item: BookItemProps): JSX.Element => (
   <List.Item>
     <Card hoverable>
       <Flex vertical align="center">

@@ -8,8 +8,8 @@ import LoginFields from './LoginFields'
 const MenuModal: FC<ModalProps> = ({ open, onCancel }) => {
   const [form] = Form.useForm()
 
-  const onFinish = (values: any) => {
-    console.log('Form submitted:', values)
+  const onFinish = (/* values: unknown */) => {
+    // console.log('Form submitted:', values)
   }
 
   return (
