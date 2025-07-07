@@ -1,35 +1,30 @@
-import css from '@eslint/css'
 import js from '@eslint/js'
-import json from '@eslint/json'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import pluginReact from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-export default defineConfig([
+const settings = [
+  { ignores: ['node_modules', 'build'] },
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    files: ['**/*.{js,ts,jsx,tsx}'],
     plugins: { js },
     extends: ['js/recommended']
   },
   {
-    files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    files: ['**/*.{js,ts,jsx,tsx}'],
     languageOptions: { globals: { ...globals.browser, ...globals.node } }
   },
   eslintPluginPrettierRecommended,
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
-    files: ['**/*.json'],
-    plugins: { json },
-    language: 'json/json',
-    extends: ['json/recommended']
-  },
-  {
-    files: ['**/*.css'],
-    plugins: { css },
-    language: 'css/css',
-    extends: ['css/recommended']
+    rules: {
+      'react/react-in-jsx-scope': 0,
+      'no-console': 2
+    }
   }
-])
+]
+
+export default defineConfig(settings)
