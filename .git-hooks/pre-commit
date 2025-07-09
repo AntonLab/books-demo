@@ -1,3 +1,33 @@
-# !/bin/sh
-# touch PreCommitHookRan
-npm run project:prettify
+#!/bin/sh
+# Pre-commit hook to prettify files and run ESLint
+
+# Staged files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|jsx|ts|tsx|json|css|scss|md)$')
+
+if [ -z "$STAGED_FILES" ]; then
+  exit 0
+fi
+
+PASS=true
+
+# Run Prettier
+echo "Running Prettier..."
+npx prettier --write $STAGED_FILES
+
+# Add changes made by Prettier
+git add $STAGED_FILES
+
+# Run ESLint
+echo "Running ESLint..."
+npx eslint $STAGED_FILES
+
+if [ $? -ne 0 ]; then
+  echo "ESLint failed. Please fix the errors and try committing again."
+  PASS=false
+fi
+
+if ! $PASS; then
+  exit 1
+fi
+
+exit 0
