@@ -15,9 +15,9 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "src/**/*.{ts,tsx}": [
       "prettier --write",
-      "eslint --fix --max-warnings 0 ."
+      "eslint --fix --max-warnings 0"
     ]
   },
   "repository": {

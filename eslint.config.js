@@ -23,6 +23,9 @@ const settings = [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'no-console': 'error'
+    },
+    settings: {
+      react: { version: 'detect' }
     }
   }
 ]
