@@ -21,8 +21,8 @@ const settings = [
   pluginReact.configs.flat.recommended,
   {
     rules: {
-      'react/react-in-jsx-scope': 0,
-      'no-console': 2
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'error'
     }
   }
 ]
