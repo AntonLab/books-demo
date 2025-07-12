@@ -1,3 +1,4 @@
+import { Result } from 'antd'
 import { Component } from 'react'
 
 import { type ComponentProps } from '@customTypes/component'
@@ -20,8 +21,17 @@ class ErrorBoundary extends Component<ComponentProps, ErrorBoundaryState> {
     const { hasError } = this.state
     const { children } = this.props
 
+    // TODO: Fix main page redirect
+
     if (hasError) {
-      return <h1>Something went wrong.</h1>
+      return (
+        <Result
+          status="500"
+          title="500"
+          subTitle="Sorry, something went wrong."
+          // extra={<Button type="primary">Back Home</Button>}
+        />
+      )
     }
 
     return children

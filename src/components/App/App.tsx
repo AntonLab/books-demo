@@ -9,6 +9,7 @@ import HeaderMenu from './components/HeaderMenu'
 // TODO: Add error boundary
 // TODO: Add antd theme provider
 // TODO: Check bundle size warnings
+// TODO: Replace husky and lint-staged with pre-commit git hook
 
 const footerText = `Demo project ${new Date().getFullYear()}. Version ${__VERSION__}`
 

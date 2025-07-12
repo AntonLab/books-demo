@@ -1,0 +1,19 @@
+{
+  "id": "{{objectId()}}",
+  "name": "{{lorem(1, \"words\")}}",
+  "status": "{{lorem(1, \"words\")}}",
+  "picture": "http://placehold.it/32x32",
+  "authors": ["{{repeat(1, 2)}}", { "id": "{{objectId()}}", "fullName": "{{firstName()}} {{surname()}}" }],
+  "series": {
+    "id": "{{objectId()}}",
+    "name":  "{{lorem(1, \"words\")}}"
+  },
+  "size": "{{integer(20000, 45000)}}",
+  "lastUpdate": "{{date(new Date(2024, 0, 1), new Date(2025, 0, 1), \"YYYY-MM-ddThh:mm:ss Z\")}}",
+  "tags": ["{{repeat(3, 10)}}", "{{lorem(1, \"words\")}}"],
+  "views": "{{integer(1000, 450000)}}",
+  "likes": "{{integer(10, 1500)}}",
+  "comments": "{{integer(0, 1500)}}",
+  "review": "{{integer(0, 10)}}",
+  "chapters": ["{{repeat(15, 25)}}", { "id": "{{objectId()}}", "name": "{{lorem(1, \"words\")}}" }]
+}

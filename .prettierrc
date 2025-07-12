@@ -12,6 +12,7 @@
     "^@constants/(.*)$",
     "^@customTypes/(.*)$",
     "^@pages/(.*)$",
+    "^@/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,

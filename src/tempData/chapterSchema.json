@@ -1,0 +1,13 @@
+{
+  "id": "{{objectId()}}",
+  "bookId": "{{objectId()}}",
+  "name": "{{lorem(1, \"words\")}}",
+  "text": "{{lorem(10, \"paragraphs\")}}",
+  "neighbors": [
+    "{{repeat(1,2)}}",
+    {
+      "id": "{{objectId()}}",
+      "name": "{{lorem(1, \"words\")}}"
+    }
+  ]
+}

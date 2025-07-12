@@ -1,8 +1,9 @@
 export const ROUTES = {
+  authors: '/authors',
+  books: '/books',
+  chapters: '/chapters',
   home: '/',
   myLibrary: '/my-library',
-  author: '/author',
-  book: '/book',
   search: '/search'
 }
 

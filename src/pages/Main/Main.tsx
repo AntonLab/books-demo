@@ -8,8 +8,9 @@ import ContentRow from '@components/ContentRow'
 
 import { ROUTES } from '@constants/common'
 
+import data from '@/tempData/data.json'
+
 import classes from './Main.module.scss'
-import data from './data.json'
 
 const Main: FC = () => (
   <Layout className={classes.layoutMain}>
