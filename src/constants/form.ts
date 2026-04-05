@@ -1,4 +1,4 @@
-import { type Rule } from 'rc-field-form/lib/interface'
+import { Rule } from 'antd/es/form'
 
 export const VALIDATE_MESSAGES = {
   required: '${label} is required',

@@ -1,26 +1,23 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "module": "ESNext",
-    "moduleResolution": "Node",
     "noImplicitAny": true,
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@functions/*": ["src/functions/*"],
-      "@components/*": ["src/components/*"],
-      "@constants/*": ["src/constants/*"],
-      "@customTypes/*": ["src/customTypes/*"],
-      "@pages/*": ["src/pages/*"]
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@functions/*": ["./src/functions/*"],
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@customTypes/*": ["./src/customTypes/*"],
+      "@pages/*": ["./src/pages/*"]
     },
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "ES5"
+    "strict": true
   },
   "ts-node": {
     "compilerOptions": {
