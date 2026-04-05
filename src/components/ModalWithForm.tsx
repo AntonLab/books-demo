@@ -9,7 +9,7 @@ import { type FC, type ReactNode } from 'react'
 
 import { VALIDATE_MESSAGES } from '@constants/form'
 
-import { type ComponentProps } from '@customTypes/component'
+import { type FunctionComponent } from '@customTypes/component'
 
 const okButtonProps: ButtonProps = { autoFocus: true, htmlType: 'submit' }
 
@@ -24,7 +24,7 @@ const modalRender = (dom: ReactNode, formProps: FormProps) => (
   </Form>
 )
 
-interface ModalWithFormProps extends ComponentProps {
+interface ModalWithFormProps extends FunctionComponent {
   formProps: FormProps
   modalProps: ModalProps
 }

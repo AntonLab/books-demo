@@ -17,6 +17,7 @@ const buildPlugins = (env: BuildOptions): webpack.Configuration['plugins'] => {
 
   const plugins: webpack.Configuration['plugins'] = [
     new webpack.DefinePlugin({
+      __DEV_MODE__: isDev,
       __VERSION__: JSON.stringify(version)
     }),
     new HtmlWebpackPlugin({

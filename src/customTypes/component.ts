@@ -1,5 +1,5 @@
-import { type ReactNode } from 'react'
-
-export interface ComponentProps {
-  children: ReactNode
+export interface FunctionComponent {
+  children?: React.ReactNode
 }
+
+// type FC<P = {}> = FunctionComponent<P>;

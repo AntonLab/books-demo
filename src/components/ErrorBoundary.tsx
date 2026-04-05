@@ -1,14 +1,14 @@
 import { Result } from 'antd'
-import { Component } from 'react'
+import { Component, ErrorInfo } from 'react'
 
-import { type ComponentProps } from '@customTypes/component'
+import { type FunctionComponent } from '@customTypes/component'
 
 interface ErrorBoundaryState {
   hasError: boolean
 }
 
-class ErrorBoundary extends Component<ComponentProps, ErrorBoundaryState> {
-  constructor(props: ComponentProps) {
+class ErrorBoundary extends Component<FunctionComponent, ErrorBoundaryState> {
+  constructor(props: FunctionComponent) {
     super(props)
     this.state = { hasError: false }
   }
@@ -17,9 +17,15 @@ class ErrorBoundary extends Component<ComponentProps, ErrorBoundaryState> {
     return { hasError: true }
   }
 
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    if (!__DEV_MODE__) return
+
+    // eslint-disable-next-line no-console
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
+  }
+
   render() {
     const { hasError } = this.state
-    const { children } = this.props
 
     // TODO: Fix main page redirect
 
@@ -33,6 +39,8 @@ class ErrorBoundary extends Component<ComponentProps, ErrorBoundaryState> {
         />
       )
     }
+
+    const { children } = this.props
 
     return children
   }
