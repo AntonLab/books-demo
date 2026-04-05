@@ -1,12 +1,12 @@
 import { Menu } from 'antd'
-import { type FC, useCallback, useMemo, useState } from 'react'
+import { type ReactNode, useCallback, useMemo, useState } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@constants/common'
 
 import MenuModal from './components/MenuModal'
 
-const RightMenu: FC = () => {
+const RightMenu = (): ReactNode => {
   const [open, setOpen] = useState(false)
 
   const navRight = useMemo(

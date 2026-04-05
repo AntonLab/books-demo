@@ -1,7 +1,7 @@
 import { Layout } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
-const MyLibrary: FC = () => (
+const MyLibrary = (): ReactNode => (
   <Layout>
     <h1>My Library page</h1>
   </Layout>

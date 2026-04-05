@@ -1,7 +1,7 @@
 import { Form, /* Select, */ Slider } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
-const ChapterSettingsFields: FC = () => (
+const ChapterSettingsFields = (): ReactNode => (
   <>
     <Form.Item label="Brightness" name="brightness">
       <Slider max={5} />

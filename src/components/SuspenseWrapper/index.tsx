@@ -1,11 +1,11 @@
 import { Spin } from 'antd'
-import { type FC, Suspense } from 'react'
+import { type ReactNode, Suspense } from 'react'
 
 import { type FunctionComponent } from '@customTypes/component'
 
 import classes from './SuspenseWrapper.module.scss'
 
-const SuspenseWrapper: FC<FunctionComponent> = ({ children }) => (
+const SuspenseWrapper = ({ children }: FunctionComponent): ReactNode => (
   <Suspense fallback={<Spin className={classes.spinner} size="large" />}>
     {children}
   </Suspense>

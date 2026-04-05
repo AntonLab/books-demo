@@ -5,7 +5,7 @@ import {
   Modal,
   type ModalProps
 } from 'antd'
-import { type FC, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
 import { VALIDATE_MESSAGES } from '@constants/form'
 
@@ -29,11 +29,11 @@ interface ModalWithFormProps extends FunctionComponent {
   modalProps: ModalProps
 }
 
-const ModalWithForm: FC<ModalWithFormProps> = ({
+const ModalWithForm = ({
   children,
   formProps,
   modalProps
-}) => (
+}: ModalWithFormProps): ReactNode => (
   <Modal
     destroyOnHidden
     width={400}

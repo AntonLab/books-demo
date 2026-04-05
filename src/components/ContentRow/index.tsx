@@ -1,5 +1,5 @@
 import { Card, type CardProps } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
 import ContentRowTitle from './components/ContentRowTitle'
 
@@ -8,7 +8,7 @@ interface ContentRowProps extends CardProps {
   subTitle?: string
 }
 
-const ContentRow: FC<ContentRowProps> = ({ children, ...cardProps }) => (
+const ContentRow = ({ children, ...cardProps }: ContentRowProps): ReactNode => (
   <Card
     {...cardProps}
     title={

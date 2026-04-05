@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Flex, Layout, Tooltip } from 'antd'
-import { type Dispatch, type FC, type SetStateAction } from 'react'
+import { type Dispatch, type ReactNode, type SetStateAction } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@constants/common'
@@ -33,7 +33,7 @@ interface HeaderProps {
   setPageStyle: Dispatch<SetStateAction<ChapterSettings>>
 }
 
-const Header: FC<HeaderProps> = ({ book, pageStyle, setPageStyle }) => (
+const Header = ({ book, pageStyle, setPageStyle }: HeaderProps): ReactNode => (
   <Layout.Header>
     <Flex style={{ height: '100%' }} align="center" justify="space-between">
       <Flex gap={10}>

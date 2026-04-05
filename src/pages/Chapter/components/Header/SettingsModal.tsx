@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Form, Tooltip } from 'antd'
 import {
   type Dispatch,
-  type FC,
+  type ReactNode,
   type SetStateAction,
   useCallback,
   useState
@@ -19,7 +19,10 @@ interface SettingsModalProps {
   setPageStyle: Dispatch<SetStateAction<ChapterSettings>>
 }
 
-const SettingsModal: FC<SettingsModalProps> = ({ pageStyle, setPageStyle }) => {
+const SettingsModal = ({
+  pageStyle,
+  setPageStyle
+}: SettingsModalProps): ReactNode => {
   const [modalOpen, setModalOpen] = useState(false)
   const [form] = Form.useForm()
 

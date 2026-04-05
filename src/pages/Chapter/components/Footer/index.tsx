@@ -1,5 +1,5 @@
 import { Flex, Layout } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
 import { type IdName } from '@/types'
 
@@ -10,7 +10,7 @@ interface FooterProps {
   neighbors: (IdName | null)[]
 }
 
-const Footer: FC<FooterProps> = ({ bookId = '', neighbors = [] }) => (
+const Footer = ({ bookId = '', neighbors = [] }: FooterProps): ReactNode => (
   <Layout.Footer>
     <Flex justify="space-between">
       {neighbors.map((neighbor, index = 0) =>

@@ -1,5 +1,5 @@
 import { Layout } from 'antd'
-import { type FC, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 
 import book from '@/tempData/book.json'
 import chapter from '@/tempData/chapter.json'
@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { ChapterSettings } from './types'
 
-const Chapter: FC = () => {
+const Chapter = (): ReactNode => {
   const [pageStyle, setPageStyle] = useState<ChapterSettings>(() => ({
     brightness: 5,
     fontSize: 15,

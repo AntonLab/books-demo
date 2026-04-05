@@ -1,5 +1,5 @@
 import { Layout, List } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 import { Link } from 'react-router'
 
 import renderListBookItem from '@functions/renderListBookItem'
@@ -12,7 +12,7 @@ import data from '@/tempData/data.json'
 
 import classes from './Main.module.scss'
 
-const Main: FC = () => (
+const Main = (): ReactNode => (
   <Layout className={classes.layoutMain}>
     <ContentRow
       title="Popular Books"

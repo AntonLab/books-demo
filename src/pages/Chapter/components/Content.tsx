@@ -1,12 +1,12 @@
 import { FloatButton, Layout, Typography } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
 interface ChapterProps {
   name: string
   text: string
 }
 
-const Chapter: FC<ChapterProps> = ({ name, text }) => (
+const Chapter = ({ name, text }: ChapterProps): ReactNode => (
   <Layout.Content>
     <Typography.Title style={{ textAlign: 'center' }}>{name}</Typography.Title>
 

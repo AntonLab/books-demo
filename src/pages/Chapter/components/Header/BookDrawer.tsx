@@ -1,7 +1,7 @@
 import { faList } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Drawer, Flex, List, Statistic, Tag, Typography } from 'antd'
-import { type FC, useState } from 'react'
+import { type ReactNode, useState } from 'react'
 import { Link } from 'react-router'
 
 import LabelWithText from '@components/LabelWithText'
@@ -12,7 +12,7 @@ interface BookDrawerProps {
   book: Book
 }
 
-const BookDrawer: FC<BookDrawerProps> = ({ book }) => {
+const BookDrawer = ({ book }: BookDrawerProps): ReactNode => {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (

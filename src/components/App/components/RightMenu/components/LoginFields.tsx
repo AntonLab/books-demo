@@ -1,5 +1,5 @@
 import { Form, Input } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
 import RulesList from '@components/RulesList'
 
@@ -9,7 +9,7 @@ import { SHORT_STRING_REQUIRED_RULES } from '@constants/form'
 // TODO: Recheck password regex
 // TODO: make password rules view more dynamic
 
-const LoginFields: FC = () => (
+const LoginFields = (): ReactNode => (
   <>
     <Form.Item
       label="Email"

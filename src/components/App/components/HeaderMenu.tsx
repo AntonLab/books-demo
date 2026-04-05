@@ -1,5 +1,5 @@
 import { Flex, Menu } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@constants/common'
@@ -17,7 +17,7 @@ const navLeft = [
   }
 ]
 
-const HeaderMenu: FC = () => (
+const HeaderMenu = (): ReactNode => (
   <Flex justify="space-between">
     <Menu items={navLeft} mode="horizontal" theme="dark" />
 

@@ -1,7 +1,7 @@
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 import { Link } from 'react-router'
 
 import { ROUTES } from '@/constants/common'
@@ -12,12 +12,12 @@ interface NavItemProps extends IdName {
   isLeft: boolean
 }
 
-const NavItem: FC<NavItemProps> = ({
+const NavItem = ({
   bookId = '',
   id = '',
   isLeft = false,
   name = ''
-}) => (
+}: NavItemProps): ReactNode => (
   <Button
     icon={<FontAwesomeIcon icon={isLeft ? faArrowLeft : faArrowRight} />}
     iconPosition={isLeft ? 'start' : 'end'}

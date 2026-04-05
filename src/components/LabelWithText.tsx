@@ -1,12 +1,12 @@
 import { Flex, Typography } from 'antd'
-import { type FC, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
 interface LabelWithTextProps {
   label: string
   text: string | number | ReactNode
 }
 
-const LabelWithText: FC<LabelWithTextProps> = ({ label, text }) => (
+const LabelWithText = ({ label, text }: LabelWithTextProps): ReactNode => (
   <Flex gap={5}>
     <Typography.Text type="secondary">{label}:</Typography.Text>
 

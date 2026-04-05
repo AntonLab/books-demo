@@ -1,4 +1,4 @@
-import { type FC, memo } from 'react'
+import { type ReactNode, memo } from 'react'
 
 import classes from './RulesList.module.scss'
 
@@ -10,7 +10,7 @@ const PASSWORD_RULES = [
   'Password length must be between 8 and 15 characters'
 ]
 
-const RulesList: FC = () => (
+const RulesList = (): ReactNode => (
   <ul className={classes.validationMessages}>
     {PASSWORD_RULES.map((text = '', index = 0) => (
       <li key={`rule-${index}`}>{text}</li>

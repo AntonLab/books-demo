@@ -1,10 +1,10 @@
-import { type FC, lazy } from 'react'
+import { type ReactNode, lazy } from 'react'
 
 import PageWrapper from '@components/PageWrapper'
 
 const MainLazy = lazy(() => import('./Main'))
 
-const MainLazyWrapper: FC = () => (
+const MainLazyWrapper = (): ReactNode => (
   <PageWrapper>
     <MainLazy />
   </PageWrapper>

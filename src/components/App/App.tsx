@@ -1,5 +1,5 @@
 import { Layout } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 import { Outlet } from 'react-router'
 
 import classes from './App.module.scss'
@@ -13,7 +13,7 @@ import HeaderMenu from './components/HeaderMenu'
 
 const footerText = `Demo project ${new Date().getFullYear()}. Version ${__VERSION__}`
 
-const App: FC = () => (
+const App = (): ReactNode => (
   <Layout>
     <Layout.Header>
       <HeaderMenu />

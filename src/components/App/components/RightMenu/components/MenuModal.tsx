@@ -1,11 +1,11 @@
 import { Form, type ModalProps } from 'antd'
-import { type FC } from 'react'
+import { type ReactNode } from 'react'
 
 import ModalWithForm from '@components/ModalWithForm'
 
 import LoginFields from './LoginFields'
 
-const MenuModal: FC<ModalProps> = ({ open, onCancel }) => {
+const MenuModal = ({ open, onCancel }: ModalProps): ReactNode => {
   const [form] = Form.useForm()
 
   const onFinish = (/* values: unknown */) => {
